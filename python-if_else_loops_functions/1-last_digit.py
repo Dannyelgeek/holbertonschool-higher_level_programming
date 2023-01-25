@@ -7,4 +7,4 @@ if reminder > 5:
 elif reminder == 0:
     print(f'Last digit of {number} is {reminder} and is 0')
 elif reminder < 6 and reminder != 0:
-    print(f'Last digit of {number} is {-reminder} and is less than 6 an not 0')
+    print(f'Last digit of {number} is {reminder} and is less than 6 an not 0')
