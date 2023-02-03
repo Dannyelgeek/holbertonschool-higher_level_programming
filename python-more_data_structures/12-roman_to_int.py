@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     result = 0
     for ind in reversed(roman_string):
         traduce_nums = roman_nums[ind]
-        if result < traduce_nums:
+        if result < traduce_nums * 5:
            result += traduce_nums
         else:
             -traduce_nums
