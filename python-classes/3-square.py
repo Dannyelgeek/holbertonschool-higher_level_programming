@@ -2,6 +2,7 @@
 '''Find the area in the Square class.'''
 
 
+
 class Square:
     '''Return area of the square.'''
     def __init__(self, size=0):
