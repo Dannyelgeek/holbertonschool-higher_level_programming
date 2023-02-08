@@ -5,9 +5,9 @@
 class Square:
     '''Instatinate size with a value.'''
     def __init__(self, size=0):
-        try:
+        if size == int:
             self.__size = size
-        except ValueError:
-            raise ValueError("size must be >= 0")
-        except TypeError:
+        else:
             raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
