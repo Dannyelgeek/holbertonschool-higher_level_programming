@@ -19,13 +19,17 @@ Test #5 sum a float with a negative integer
 >>> add_integer(100.3, -2)
 98
 
-Test #6 sum a integer with a string
+Test #6 sum a float with the standar value in b
+>>> add_integer(100.3)
+198
+
+Test #7 sum a integer with a string
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
-Test #7 tryin sum without armuments
+Test #8 tryin sum without armuments
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
