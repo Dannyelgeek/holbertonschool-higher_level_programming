@@ -20,10 +20,10 @@ Test #5 sum a float with a negative integer
 98
 
 Test #6 sum a integer with a string
->>> add_integer(4, "Shool")
+>>> add_integer(4, "School")
 Traceback (most recent call last):
 ...
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
+TypeError: b must be an integer
 
 Test #7 tryin sum without armuments
 >>> add_integer(None)
