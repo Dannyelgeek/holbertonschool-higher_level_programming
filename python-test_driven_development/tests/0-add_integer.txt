@@ -29,4 +29,4 @@ Test #7 tryin sum without armuments
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
-TypeError: sum() missing 1 required positional argument: 'b'
+TypeError: a must be an integer
