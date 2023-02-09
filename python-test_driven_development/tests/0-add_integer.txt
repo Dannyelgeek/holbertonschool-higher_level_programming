@@ -20,8 +20,8 @@ Test #5 sum a float with a negative integer
 98
 
 Test #6 sum a float with the standar value in b
->>> add_integer(100.3)
-198
+>>> add_integer(1000.3)
+1098
 
 Test #7 sum a integer with a string
 >>> add_integer(4, "School")
