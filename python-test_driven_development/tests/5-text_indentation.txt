@@ -1,9 +1,12 @@
 testing 5-text_indentation.txt
 ------------------------------
-Test #1 import text_indentation
+First import ``text_indentation``
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Test #2 print format text
+Now use it:
+
+Basic usage:
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
@@ -41,17 +44,17 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-Test #3 print a format integer
+Non string input:
 >>> text_indentation(3)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
-Test #4 print a format text without wildcars
+No special char in string input:
 >>> text_indentation("hello")
 hello
 
-Test #5 QA case
+QA case:
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
 <BLANKLINE>
@@ -61,7 +64,7 @@ How are you:
 <BLANKLINE>
 John
 
-Test #6 print w argument
+No input:
 >>> text_indentation()
 Traceback (most recent call last):
 ...
