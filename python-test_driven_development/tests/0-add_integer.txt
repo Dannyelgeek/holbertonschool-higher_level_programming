@@ -1,0 +1,4 @@
+testing 0-add_integer.py
+------------------------
+>>> add_integer(2)
+100
