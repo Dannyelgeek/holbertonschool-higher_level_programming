@@ -1,7 +1,7 @@
 Testing 4-print_square.py
 -------------------------
 Test #1 import print_square
-print_square = __import__('4-print_square').print_square
+>>> print_square = __import__('4-print_square').print_square
 
 Test #2 print a square with a integer
 >>> print_square(4)
