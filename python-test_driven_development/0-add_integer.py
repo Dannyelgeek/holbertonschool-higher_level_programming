@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
+    '''This function sum two integers.'''
     if type(a) == float or type(b) == float:
         a = int(a)
         b = int(b)
