@@ -52,14 +52,14 @@ Test #4 print a format text without wildcars
 hello
 
 Test #5 QA case
->>> text_indentation("Holberton. School? How are you: Danny")
+>>> text_indentation("Holberton. School? How are you: John")
 Holberton.
 <BLANKLINE>
 School?
 <BLANKLINE>
 How are you:
 <BLANKLINE>
-Danny
+John
 
 Test #6 print w argument
 >>> text_indentation()
