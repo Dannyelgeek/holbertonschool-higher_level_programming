@@ -1,4 +1,4 @@
-testing 2-matrix_divided.txt
+testing 2-matrix_divided.py
 ----------------------------
 Test #1 import matrix_divided module
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
