@@ -23,3 +23,6 @@ def text_indentation(text):
             ind += 1
 
     print(text, end="")
+
+
+text_indentation("Holberton. School? How are you: John")
