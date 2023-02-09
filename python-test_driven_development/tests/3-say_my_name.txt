@@ -17,11 +17,11 @@ Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
-Test #5 prin a full name with a float
->>> say_my_name(12.3, "White")
+Test #5 prin a full name with a int in the last name
+>>> say_my_name("White", 9)
 Traceback (most recent call last):
 ...
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 Test #6 print a full name without arguments
 >>> say_my_name()
