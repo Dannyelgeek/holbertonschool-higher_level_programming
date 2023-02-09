@@ -17,10 +17,9 @@ def text_indentation(text):
     ind = 0
     for chr in text:
         if chr in wildcards:
-            text = text[:ind + 1] + "\n\n" + text[ind +1:]
+            text = text[:ind + 1] + "\n\n" + text[ind + 1:]
             ind += 3
         else:
             ind += 1
 
     print(text, end="")
-   
