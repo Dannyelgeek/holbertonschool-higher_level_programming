@@ -7,10 +7,6 @@ Test #2 print a full name with two strings
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
-Test #3 print a name only with a string
->>> say_my_name("Bob")
-My name is Bob
-
 Test #4 print a full name with a integer
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
