@@ -21,8 +21,7 @@ def matrix_divided(matrix, div):
             if not isinstance(ind_num, (int, float)):
                 raise TypeError(msg_1)
             else:
-                sub_list.append(round(ind_num /div, 2))
+                sub_list.append(round(ind_num / div, 2))
         new_matrix.append(sub_list)
-    
+
     return new_matrix
-    
