@@ -1,0 +1,34 @@
+Testing 4-print_square.py
+-------------------------
+Test #1 import print_square
+print_square = __import__('4-print_square').print_square
+
+Test #2 print a square with a integer
+>>> print_square(4)
+####
+####
+####
+####
+
+Test #3 print a square with a negative integer
+>>> print_square(-4)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Test #4 print a square with a float
+>>> print_square(4.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Test #5 print a square with a string
+>>> print_square("Hello")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Test #6 print a square without arguments
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
