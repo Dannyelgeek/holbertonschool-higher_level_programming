@@ -64,4 +64,3 @@ class Rectangle:
                 else:
                     new_line += (("#" * rect_w) + "\n")
         return (new_line)
-        
