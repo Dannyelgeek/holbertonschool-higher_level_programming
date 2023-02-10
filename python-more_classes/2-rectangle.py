@@ -41,7 +41,7 @@ class Rectangle:
         area_w = self.__width
         area_h = self.__height
         return (area_w * area_h)
-    
+
     def perimeter(self):
         '''Rectangle perimeter'''
         per_w = self.__width
