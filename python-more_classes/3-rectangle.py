@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Calculate the area and the perimeter of the rectangle'''
+'''Prints a rectangle'''
 
 
 class Rectangle:
@@ -52,6 +52,7 @@ class Rectangle:
             return (2 * (per_w + per_h))
 
     def __str__(self):
+        '''print a rectangle'''
         new_line = ""
         rect_w = self.__width
         rect_h = self.__height
