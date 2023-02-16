@@ -50,3 +50,7 @@ Test #5 print MyList when is empty
 >>> my_list = MyList()
 >>> print(my_list)
 []
+
+print_sorted when MyList is empty
+>>> my_list.print_sorted()
+[]
