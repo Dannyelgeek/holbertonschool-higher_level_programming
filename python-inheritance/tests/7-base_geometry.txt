@@ -62,4 +62,4 @@ Test #12uses a tuple as argument
 >>> integer_validator(“age”, (4,))
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+SyntaxError: invalid character in identifier
