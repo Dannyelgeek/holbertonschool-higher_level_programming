@@ -55,3 +55,13 @@ print_sorted when MyList is empty
 >>> my_list.print_sorted()
 []
 
+Test #6 print MyList as a new list
+>>> my_list = []
+>>> print(my_list)
+[]
+
+print_sorted MyList as a new list
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+AttributeError: 'list' object has no attribute 'print_sorted'
