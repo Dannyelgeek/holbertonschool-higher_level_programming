@@ -1,0 +1,46 @@
+Testing 1-my_list.py
+--------------------
+Test #1 import MyLyst subclass
+>>> MyList = __import__('1-my_list').MyList
+
+Test #2 print basic MyList use
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Basic print_sorted use
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Test #3 print MyList with negative numbers
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(-3)
+>>> my_list.append(5)
+>>> print(my_list)
+[-1, 4, 2, -3, 5]
+
+print_sorted with negative numbers
+>>> my_list.print_sorted()
+[-3, -1, 2, 4, 5]
+
+Test #4 print MyList with a big integer
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(333333)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 333333, 5]
+
+print_sorted with a big integer
+[1, 2, 4, 5, 333333]
