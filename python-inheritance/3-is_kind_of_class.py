@@ -6,7 +6,7 @@
 
 def is_kind_of_class(obj, a_class):
     '''Function to verify the object instance'''
-    if isinstance(obj, a_class) == True:
+    if isinstance(obj, a_class) is True:
         return True
     else:
         return False
