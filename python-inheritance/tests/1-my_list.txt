@@ -54,3 +54,9 @@ Test #5 print MyList when is empty
 print_sorted when MyList is empty
 >>> my_list.print_sorted()
 []
+
+test #6 pr without MyList
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+NameError: name 'my_list' is not defined
