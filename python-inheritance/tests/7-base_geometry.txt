@@ -3,4 +3,9 @@ Testing 7-base_geometry
 Test #1 import module BaseGeometry
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Test #2 
+Test #2 trying to use area module
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
