@@ -6,7 +6,7 @@ class MyList(list):
     '''Mylist is a subclass'''
     def __init__(self):
         '''Mylist constructor.'''
-        self.MyList
+        self.MyList = []
 
     def print_sorted(self):
         '''Module to sort the list'''
