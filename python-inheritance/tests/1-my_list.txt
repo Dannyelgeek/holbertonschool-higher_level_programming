@@ -47,7 +47,8 @@ print_sorted with a big integer
 [1, 2, 4, 5, 333333]
 
 Test #5 print MyList when is None
->>> my_list = MyList(None)
+>>> my_list = MyList()
+>>> my_list.append(None)
 >>> print(my_list)
 Traceback (most recent call last):
 ...
