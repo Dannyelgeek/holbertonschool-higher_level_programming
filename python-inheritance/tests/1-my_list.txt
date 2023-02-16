@@ -43,6 +43,7 @@ Test #4 print MyList with a big integer
 [1, 4, 2, 333333, 5]
 
 print_sorted with a big integer
+>>> my_list.print_sorted()
 [1, 2, 4, 5, 333333]
 
 Test #5 print MyList when is None
