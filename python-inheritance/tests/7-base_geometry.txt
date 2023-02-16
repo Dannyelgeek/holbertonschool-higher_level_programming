@@ -10,50 +10,56 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
-Function integer_validator basic usage:
-    >>> bg.integer_validator("holberton", 98)
+Test #3 validates an integer
+>>> bg.integer_validator("holberton", 98)
 
-Function integer_validator 0 input usage:
-    >>> bg.integer_validator("holberton", 0)
-    Traceback (most recent call last):
-    ...
-    ValueError: holberton must be greater than 0
+Test #4 use 0 as argument
+>>> bg.integer_validator("holberton", 0)
+Traceback (most recent call last):
+...
+ValueError: holberton must be greater than 0
 
-Function integer_validator negative input usage:
-    >>> bg.integer_validator("holberton", -1)
-    Traceback (most recent call last):
-    ...
-    ValueError: holberton must be greater than 0
+Test #5 uses a negative as an argument
+>>> bg.integer_validator("holberton", -1)
+Traceback (most recent call last):
+...
+ValueError: holberton must be greater than 0
 
-Function integer_validator non int input usage:
-    >>> bg.integer_validator("holberton", "school")
-    Traceback (most recent call last):
-    ...
-    TypeError: holberton must be an integer
+test #6 uses a string as argument
+>>> bg.integer_validator("holberton", "school")
+Traceback (most recent call last):
+...
+TypeError: holberton must be an integer
 
-Function integer_validator infinity input usage:
-    >>> bg.integer_validator("holberton", float("inf"))
-    Traceback (most recent call last):
-    ...
-    TypeError: holberton must be an integer
+Test #7 uses an infinite float as argument
+>>> bg.integer_validator("holberton", float("inf"))
+Traceback (most recent call last):
+...
+TypeError: holberton must be an integer
 
-Function integer_validator large int input usage:
-    >>> bg.integer_validator("holberton", 9999999999999999999999999)
+Test #8 uses a large integer as argument
+>>> bg.integer_validator("holberton", 9999999999999999999999999)
 
-Function integer_validator float input usage:
-    >>> bg.integer_validator("holberton", 90.8)
-    Traceback (most recent call last):
-    ...
-    TypeError: holberton must be an integer
+Test #9 use a float as argument
+>>> bg.integer_validator("holberton", 90.8)
+Traceback (most recent call last):
+...
+TypeError: holberton must be an integer
 
-Function integer_validator list usage:
-    >>> bg.integer_validator("holberton", [90])
-    Traceback (most recent call last):
-    ...
-    TypeError: holberton must be an integer
+Test #10 uses a list as argument
+>>> bg.integer_validator("holberton", [90])
+Traceback (most recent call last):
+...
+TypeError: holberton must be an integer
 
-Function integer_validator no input usage:
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+Test #11 validation without argument
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test #12uses a tuple as argument
+>>> integer_validator(“age”, (4,))
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
