@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''Create a empty geometry class'''
-
+'''BaseGeometry class inheritance practice.'''
 
 class BaseGeometry():
     '''This is a superclass.'''
