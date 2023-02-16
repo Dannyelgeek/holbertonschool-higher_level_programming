@@ -4,7 +4,7 @@
 
 
 def is_same_class(obj, a_class):
-    '''Function to verify the instance'''
+    '''Function to verify the object type'''
     if type(obj) is a_class:
         return True
     else:
