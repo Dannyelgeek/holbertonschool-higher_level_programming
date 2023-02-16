@@ -45,14 +45,9 @@ Test #4 print MyList with a big integer
 print_sorted with a big integer
 [1, 2, 4, 5, 333333]
 
-Test #5 print MyList when is empty
->>> my_list = MyList()
->>> my_list.append()
->>> my_list.append()
->>> my_list.append()
->>> my_list.append()
->>> my_list.append()
+Test #5 print MyList when is None
+>>> my_list = MyList(None)
 >>> print(my_list)
 Traceback (most recent call last):
 ...
-TypeError: append() takes exactly one argument (0 given)
+TypeError: 'NoneType' object is not iterable
