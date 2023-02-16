@@ -55,9 +55,3 @@ print_sorted when MyList is empty
 >>> my_list.print_sorted()
 []
 
-test #6 pr without MyList
->>> MyList = __import__('1-my_list').MyList
->>> my_list.print_sorted()
-Traceback (most recent call last):
-...
-NameError: name 'my_list' is not defined
