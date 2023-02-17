@@ -11,4 +11,4 @@ def write_file(filename="", text=""):
             if not line:
                 break
             lines += 1
-        return lines
+    return lines
