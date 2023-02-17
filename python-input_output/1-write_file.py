@@ -4,8 +4,11 @@
 
 def write_file(filename="", text=""):
     '''Return the numbers of chr written.'''
-    lines = 0
     with open(filename) as readFile:
-        for line in readFile:
+        lines = 0
+        while True:
+            line = readFile.readline()
+            if not line:
+                break
             lines += 1
-    return lines
+        return lines
