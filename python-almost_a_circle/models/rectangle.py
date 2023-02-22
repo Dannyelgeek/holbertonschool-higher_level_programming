@@ -81,3 +81,8 @@ class Rectangle(Base):
         rect_h = self.__height
         for ind in range(rect_h):
             print("#" * rect_w)
+
+    def __str__(self) -> str:
+        '''Overriding the rectangle class'''
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
+ - {self.__width}/{self.__height}"
