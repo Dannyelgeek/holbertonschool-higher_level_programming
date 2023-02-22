@@ -79,8 +79,12 @@ class Rectangle(Base):
         '''Prints a rectangle in stdout'''
         rect_w = self.__width
         rect_h = self.__height
+        vector_y = self.__y
+        vector_x = self.__x
+        for ind_vec in range(vector_y):
+            print(" " * vector_y)
         for ind in range(rect_h):
-            print("#" * rect_w)
+            print(" " * vector_x + "#" * rect_w)
 
     def __str__(self) -> str:
         '''Overriding the rectangle class'''
