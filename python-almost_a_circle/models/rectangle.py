@@ -17,7 +17,7 @@ class Rectangle(Base):
     def width(self):
         '''Width private instance'''
         return (self.__width)
-    
+
     @width.setter
     def width(self, value):
         '''Set attribute value.'''
