@@ -82,7 +82,7 @@ class Rectangle(Base):
         vector_y = self.__y
         vector_x = self.__x
         for ind_vec in range(vector_y):
-            print(" " * vector_y)
+            print("")
         for ind in range(rect_h):
             print(" " * vector_x + "#" * rect_w)
 
