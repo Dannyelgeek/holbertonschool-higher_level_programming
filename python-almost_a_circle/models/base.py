@@ -50,4 +50,4 @@ class Base():
             tmp = cls(1, 1)
         if cls.__name__ == "Square":
             tmp = cls(1)
-        return tmp.update(dictionary)
+        return tmp.update(**dictionary)
