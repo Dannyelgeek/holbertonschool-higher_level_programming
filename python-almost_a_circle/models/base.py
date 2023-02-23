@@ -33,3 +33,12 @@ class Base():
             class_list.append(ind.to_dictionary())
         with open(f"{cls.__name__}.json", mode='w', encoding="utf-8") as file:
             file.write(cls.to_json_string(class_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''Returns the list of the JSON string representation json_string'''
+        json_list = []
+        if json_string is None:
+            return json_list
+        else:
+            return json.loads(json_string)
