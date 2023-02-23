@@ -37,11 +37,11 @@ class Square(Rectangle):
             len_args = len(args)
             if len_args >= 1:
                 self.id = args[0]
-            elif len_args >= 2:
+            if len_args >= 2:
                 self.size = args[1]
-            elif len_args >= 3:
+            if len_args >= 3:
                 self.x = args[2]
-            elif len_args >= 4:
+            if len_args >= 4:
                 self.y = args[3]
         else:
             for key, value in kwargs.items():
