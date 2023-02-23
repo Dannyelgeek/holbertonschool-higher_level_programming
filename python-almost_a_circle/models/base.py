@@ -54,7 +54,7 @@ class Base():
         return tmp
 
     @classmethod
-    def create(cls, **dictionary):
+    def load_from_file(cls):
         '''Returns an instance with all attributes already set'''
         try:
             rt = []
