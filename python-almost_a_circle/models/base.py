@@ -32,4 +32,4 @@ class Base():
         for ind in list_objs:
             class_list.append(ind.to_dictionary())
         with open(f"{cls.__name__}.json", mode='w', encoding="utf-8") as file:
-           file.write(cls.to_json_string(class_list))
+            file.write(cls.to_json_string(class_list))
