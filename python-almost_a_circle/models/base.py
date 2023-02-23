@@ -52,3 +52,18 @@ class Base():
             tmp = cls(1)
         tmp.update(**dictionary)
         return tmp
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns an instance with all attributes already set'''
+        try:
+            rt = []
+            file = f"{cls.__name__}.json"
+            with open(file, encoding="utf-8") as f:
+                tmp = f.read()
+                obj = cls.from_json_string(tmp)
+                for ind in obj:
+                    rt.append(cls.create(**ind))
+            return rt
+        except Exception as err:
+            return []
