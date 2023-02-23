@@ -52,9 +52,3 @@ class Base():
             tmp = cls(1)
         tmp.update(**dictionary)
         return tmp
-    
-    @classmethod
-    def load_from_file(cls):
-        '''Returns a list of instances'''
-        instance_list = []
-        with open(f"{cls.__name__}.json", mode='r', encoding="utf-8") as file:
