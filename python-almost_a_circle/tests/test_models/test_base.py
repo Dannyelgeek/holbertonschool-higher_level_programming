@@ -53,6 +53,17 @@ class TestBase(unittest.TestCase):
             r11 = Rectangle.create(**t11)
             r12 = Square.create(**t12)
 
+    def test_save_to_file(self):
+        '''Testing save_to_file method'''
+        t13_1 = Rectangle(3, 6, 9, 12)
+        t13_2 = Rectangle(15, 18)
+        t14_1 = Square(3, 6, 9)
+        t14_2 = Square(12)
+        r13 = Rectangle.save_to_file([t13_1, t13_2])
+        r14 = Square.save_to_file([t14_1, t14_2])
+
+        self.assertTrue(os.path.isfile("Rectangle.json"))
+        self.assertTrue(os.path.isfile("Square.json"))
 
 if __name__ == "__main__":
     unittest.main()
