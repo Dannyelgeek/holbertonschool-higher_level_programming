@@ -22,6 +22,10 @@ class TestBase(unittest.TestCase):
         t2 = Rectangle(6, 9, 0, 0 ,12)
         with self.assertRaises(TypeError):
             Rectangle("string")
+            Rectangle("3", 6)
+            Rectangle(3, "6")
+            Rectangle(3, 6, "9")
+            Rectangle(3, 6, 9, "12") 
             Rectangle(None)
             Rectangle(float("inf"))
             Rectangle(3.6, 9.1)
@@ -29,6 +33,11 @@ class TestBase(unittest.TestCase):
         
         with self.assertRaises(ValueError):
             Rectangle(-8, 9)
+            Rectangle(6, -9)
+            Rectangle(0, 3)
+            Rectangle(3, 0)
+            Rectangle(3, 6, -9)
+            Rectangle(3, 6, 9, -12)
             raise ValueError()
 
         self.assertEqual(t1.id, 18)
