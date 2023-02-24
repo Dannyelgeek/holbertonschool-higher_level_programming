@@ -22,5 +22,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(t4.to_json_string({"Name": "Daniel", "age": "29"}), '{"Name": "Daniel", "age": "29"}')
         self.assertEqual(t5.to_json_string([]), '[]')
 
+    def test_from_json_string(self):
+        '''Testing from_json_string method'''
+        t5 = [{"id": 3, "w": 6}]
+        r5 = Base.to_json_string(t5)
+        self.assertEqual(Base.from_json_string(r5), t5)
+
 if __name__ == "__main__":
     unittest.main()
