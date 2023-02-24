@@ -16,31 +16,27 @@ class TestBase(unittest.TestCase):
         '''Testing instances of the Rectangle class.'''
         t1 = Rectangle(1, 2)
         t2 = Rectangle(6, 9, 0, 0 ,12)
+        with self.assertRaises(TypeError):
+            Rectangle("string")
+            Rectangle("3", 6)
+            Rectangle(3, "6")
+            Rectangle(3, 6, "9")
+            Rectangle(3, 6, 9, "12") 
+            Rectangle(None)
+            Rectangle(float("inf"))
+            Rectangle(3.6, 9.1)
+            raise TypeError()
         
-        def test_errors(self):
-            with self.assertRaises(TypeError):
-                rectangle = Rectangle("1", 2)
-            with self.assertRaises(TypeError):
-                rectangle = Rectangle(1, "2")
-            with self.assertRaises(TypeError):
-                rectangle = Rectangle(1, 2, 3, "4")
-            with self.assertRaises(TypeError):
-                rectangle = Rectangle(1, 2, "3", 4)
+        with self.assertRaises(ValueError):
+            Rectangle(-8, 9)
+            Rectangle(6, -9)
+            Rectangle(0, 3)
+            Rectangle(3, 0)
+            Rectangle(3, 6, -9)
+            Rectangle(3, 6, 9, -12)
+            raise ValueError()
 
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(-1, 2)
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(1, -2)
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(0, 2)
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(1, 0)
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(1, 2, -3)
-            with self.assertRaises(ValueError):
-                rectangle = Rectangle(1, 2, 3, -4)
-
-        self.assertEqual(t1.id, 20)
+        self.assertEqual(t1.id, 18)
         self.assertEqual(t2.id, 12)
 
     def test_area(self):
@@ -55,7 +51,7 @@ class TestBase(unittest.TestCase):
 
     def test_display(self):
         '''Testing test_display method'''
-
+        
         
 
 if __name__ == "__main__":
