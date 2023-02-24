@@ -8,9 +8,9 @@ class TestBase(unittest.TestCase):
     '''Class for test Rectangle class'''
     def test_init(self):
         '''Testing instances of the Rectangle class.'''
-        t1 = Rectangle(3, 6)
+        t1 = Rectangle(1, 2)
         t2 = Rectangle(6, 9, 0, 0 ,12)
-        self.assertEqual(t1.id, 3)
+        self.assertEqual(t1.id, 6)
         self.assertEqual(t2.id, 12)
 
 if __name__ == "__main__":
