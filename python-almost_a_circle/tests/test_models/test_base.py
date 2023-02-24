@@ -65,5 +65,28 @@ class TestBase(unittest.TestCase):
         self.assertTrue(os.path.isfile("Rectangle.json"))
         self.assertTrue(os.path.isfile("Square.json"))
 
+    def test_load_from_file(self):
+        '''Testing load_from_file method'''
+        t15_1 = Rectangle(3, 6, 9, 12)
+        t15_2 = Rectangle(15, 18)
+        t16_1 = Square(3, 6, 9)
+        t16_2 = Square(12)
+
+        r15 = Rectangle.save_to_file([t15_1, t15_2])
+        r16 = Square.save_to_file([t16_1, t16_2])
+
+        rec_list = Rectangle.load_from_file()
+        sq_list = Square.load_from_file()
+
+        self.assertIsInstance(rec_list[0], Rectangle)
+        self.assertIsInstance(rec_list[1], Rectangle)
+        self.assertIsInstance(sq_list[0], Square)
+        self.assertIsInstance(sq_list[1], Square)
+
+        self.assertEqual(rec_list[0].__str__(), "[Rectangle] (5) 9/12 - 3/6")
+        self.assertEqual(rec_list[1].__str__(), "[Rectangle] (6) 0/0 - 15/18")
+        self.assertEqual(sq_list[0].__str__(), "[Square] (7) 6/9 - 3")
+        self.assertEqual(sq_list[1].__str__(), "[Square] (8) 0/0 - 12")
+
 if __name__ == "__main__":
     unittest.main()

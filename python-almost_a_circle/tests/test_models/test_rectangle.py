@@ -10,7 +10,7 @@ class TestBase(unittest.TestCase):
         '''Testing instances of the Rectangle class.'''
         t1 = Rectangle(1, 2)
         t2 = Rectangle(6, 9, 0, 0 ,12)
-        self.assertEqual(t1.id, 10)
+        self.assertEqual(t1.id, 18)
         self.assertEqual(t2.id, 12)
 
 if __name__ == "__main__":
