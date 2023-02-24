@@ -21,12 +21,15 @@ class TestBase(unittest.TestCase):
         t1 = Rectangle(1, 2)
         t2 = Rectangle(6, 9, 0, 0 ,12)
         with self.assertRaises(TypeError):
-            t3 = Rectangle("string")
-            t4 = Rectangle(None)
-            t5 = Rectangle(float("inf"))
-            t6 = Rectangle(3.6, 9.1)
-            t7 = Rectangle(-8, 9)
-            t8 = Rectangle()
+            Rectangle("string")
+            Rectangle(None)
+            Rectangle(float("inf"))
+            Rectangle(3.6, 9.1)
+            raise TypeError()
+        
+        with self.assertRaises(ValueError):
+            Rectangle(-8, 9)
+            raise ValueError()
 
         self.assertEqual(t1.id, 18)
         self.assertEqual(t1._Base__nb_objects, 18)
