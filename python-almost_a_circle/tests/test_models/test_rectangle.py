@@ -11,6 +11,11 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     '''Class for test Rectangle class'''
+    def tear_down(self):
+        '''Tears down obj count'''
+        Base._Base__nb_objects = 0
+        self.assertEqual(Base._Base__nb_objects, 0)
+
     def test_init(self):
         '''Testing instances of the Rectangle class.'''
         t1 = Rectangle(1, 2)
@@ -24,7 +29,13 @@ class TestBase(unittest.TestCase):
             t8 = Rectangle()
 
         self.assertEqual(t1.id, 18)
+        self.assertEqual(t1._Base__nb_objects, 18)
         self.assertEqual(t2.id, 12)
+        self.assertEqual(t2._Base__nb_objects, 18)
+
+    def test_area(self):
+        '''Testing instances of the Rectangle class'''
+        
 
 if __name__ == "__main__":
     unittest.main()
