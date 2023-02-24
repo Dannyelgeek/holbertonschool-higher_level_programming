@@ -74,7 +74,41 @@ class TestBase(unittest.TestCase):
         self.assertEqual(t10.__str__(), '[Rectangle] (23) 1/0 - 3/2')
         self.assertEqual(t11.__str__(), '[Rectangle] (holberton) 0/0 - 3/2')
 
-        
+    def test_update(self):
+        '''Testing update method'''
+        t12 = Rectangle(3, 2)
+        t13 = Rectangle(8, 7, 0, 0, 12)
+        t14 = Rectangle(3, 2, 1)
+        t15 = Rectangle(3, 2, id="holberton")
+        t16 = Rectangle(3, 2, id="holberton")
+
+        t12.update(5, 7)
+        self.assertEqual(t12.__str__(), '[Rectangle] (26) 0/0 - 7/2')
+        with self.assertRaises(ValueError):
+            t13.update(**{'id': 1337, 'x': -1})
+            t14.update("stringid", None, None)
+        t15.update(None)
+        self.assertEqual(t15.__str__(), '[Rectangle] (None) 0/0 - 3/2')
+        t16.update(-5)
+        self.assertEqual(t16.__str__(), '[Rectangle] (-5) 0/0 - 3/2')
+
+    def test_to_dictionary(self):
+        '''Testing to_dictionary method'''
+        t17 = Rectangle(3, 2)
+        t18 = Rectangle(8, 7, 0, 0, 12)
+        t19 = Rectangle(3, 2, 1)
+        t20 = Rectangle(3, 2, id="holberton")
+
+        r17 = {'id': 24, 'width': 3, 'height': 2, 'x': 0, 'y': 0}
+        r18 = {'id': 12, 'width': 8, 'height': 7, 'x': 0, 'y': 0}
+        r19 = {'id': 25, 'width': 3, 'height': 2, 'x': 1, 'y': 0}
+        r20 = {'id': 'holberton', 'width': 3, 'height': 2, 'x': 0, 'y': 0}
+
+        self.assertDictEqual(t17.to_dictionary(), r17)
+        self.assertDictEqual(t18.to_dictionary(), r18)
+        self.assertDictEqual(t19.to_dictionary(), r19)
+        self.assertDictEqual(t20.to_dictionary(), r20)
+
 
 if __name__ == "__main__":
     unittest.main()
