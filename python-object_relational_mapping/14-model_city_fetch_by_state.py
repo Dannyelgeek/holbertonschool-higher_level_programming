@@ -25,6 +25,7 @@ if __name__ == '__main__':
 
     for i in rows:
         print("{}: ({}) {}"
-              .format(i[0].__dict__['name'], i[1].__dict__['id'], i[1].__dict__['name']))
+              .format(i[0].__dict__['name'],
+                    i[1].__dict__['id'], i[1].__dict__['name']))
 
     session.close()
