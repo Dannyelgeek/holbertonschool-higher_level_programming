@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-'''prints all City objects from the database hbtn_0e_14_usa'''
+"""
+Write a Python file similar to model_state.py
+named model_city.py that contains the class definition of a City
+"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
@@ -21,8 +24,7 @@ if __name__ == '__main__':
     rows = session.query(State, City).join(City).all()
 
     for i in rows:
-        print("{}: ({}) {}".format(i[0].__dict__['name'],
-                            i[1].__dict__['id'],
-                            i[1].__dict__['name']))
+        print("{}: ({}) {}"
+              .format(i[0].__dict__['name'], i[1].__dict__['id'], i[1].__dict__['name']))
 
     session.close()

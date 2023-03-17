@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''contains the class definition of a City.'''
+"""Class definition of a state and an instance Base = declarative_base()"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
