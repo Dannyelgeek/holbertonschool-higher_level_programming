@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 from model_city import City
 
-
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
@@ -14,8 +13,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(username, password, database),
                            pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-
+    
     session = Session(engine)
     rows = session.query(State, City).join(City).all()
 
