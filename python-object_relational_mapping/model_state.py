@@ -13,5 +13,5 @@ class State(Base):
     '''Creates State table.'''
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, unique=True,
- autoincrement=True, nullable=False)
+     autoincrement=True, nullable=False)
     name = Column(String(158))
