@@ -2,8 +2,8 @@
 // prints the first argument passed to it.
 
 const argsPassed = process.argv.slice(2);
-let argsBySpace = '';
 let count = 0;
+let argsBySpace = '';
 
 for(arg of argsPassed) {
     count++
