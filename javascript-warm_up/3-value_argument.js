@@ -6,7 +6,7 @@ let count = 0;
 let argsBySpace = '';
 
 for(arg of argsPassed) {
-    count++
+  count++
 }
 
 if (count === 0) {
