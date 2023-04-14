@@ -5,7 +5,9 @@ const passedArg = process.argv.slice(2);
 const num = parseInt(passedArg, 10);
 
 if (!passedArg[0]) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
+} else if (isNaN(num) === true) {
+  console.log('Missing size');
 } else {
   for (let ind = 0; ind < num; ind++) {
     let sizeX = '';
