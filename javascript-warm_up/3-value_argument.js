@@ -5,8 +5,8 @@ const argsPassed = process.argv.slice(2);
 let count = 0;
 let argsBySpace = '';
 
-for(arg of argsPassed) {
-  count++
+for (const arg of argsPassed) {
+  count++;
 }
 
 if (count === 0) {
