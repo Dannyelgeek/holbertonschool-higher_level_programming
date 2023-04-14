@@ -3,8 +3,13 @@
 
 const argsPassed = process.argv.slice(2);
 let argsBySpace = '';
+let count = 0;
 
-if (argsPassed.length === 0) {
+for(arg of argsPassed) {
+    count++
+}
+
+if (count === 0) {
   console.log('No arguments');
 } else {
   argsPassed.forEach((val, ind) => {
