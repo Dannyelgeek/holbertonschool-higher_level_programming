@@ -6,8 +6,8 @@ class Rectangle {
     if (w <= 0 || h <= 0) {
       // empty
     } else if (w === undefined || h === undefined) {
-      //empty
-    }else {
+      // empty
+    } else {
       this.width = w;
       this.height = h;
     }
