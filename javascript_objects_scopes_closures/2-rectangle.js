@@ -5,7 +5,9 @@ class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
       // empty
-    } else {
+    } else if (w === undefined || h === undefined) {
+      //empty
+    }else {
       this.width = w;
       this.height = h;
     }
